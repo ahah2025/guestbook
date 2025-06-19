@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.javaex.vo.GbookVO;
 
-public class GbookDAO {
+public class GbookDAO<Int> {
 
 	// 필드
 	private Connection conn = null;
@@ -20,6 +20,7 @@ public class GbookDAO {
 	private String url = "jdbc:mysql://localhost:3306/guestbook_db";
 	private String id = "guestbook";
 	private String pw = "guestbook";
+	private Int no;
 
 	// 생성자
 	public GbookDAO() {

@@ -1,9 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
+<%@ page import="com.javaex.vo.GbookVO" %>
+
+<%
+	GbookVO gbookVO = (GbookVO)request.getAttribute("gVO");
+%>
+    
 <% //자바문법
 
-	System.out.println("리스트jsp");
+	System.out.println("손님 정보를 수정하는 jsp");
 
 %>
     

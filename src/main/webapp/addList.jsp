@@ -84,7 +84,7 @@
 		</tr>
 		<tr>
 			<td><a
-				href="http://localhost:8080/guestbook/gbc?action=mform&no=<%=gbookList.get(i).getNo() %>">
+				href="http://localhost:8080/guestbook/gbc?action=mform&no=<%=gbookList.get(i).getName() %>">
 				[수정폼으로 이동] </a></td>
 				
 			<%	System.out.println("여기는 수정폼입니다"); %>	
@@ -94,6 +94,8 @@
 				[삭제] <%=gbookList.get(i).getNo()%>
 				</a></td>
 				<!-- 원래 버튼으로 해야된다 js필요 안배워서 a태그로 구현 -->
+				<a
+				href="http://localhost:8080/guestbook/gbc?action=delete"></a>
 			<tr>
 		</tbody>
 	</table>

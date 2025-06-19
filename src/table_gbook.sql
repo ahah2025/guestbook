@@ -39,12 +39,12 @@ select  no,
         content,
         reg_date
 from gbook
-where no = 5
+where no = 15
 ;
 
 -- 등록
 insert into gbook
-values(null, '정우성','1111','안녕하세요. 정우성입니다.','2025-06-16')
+values(null, '이아름','2211','안녕하세요. 이아름입니다.','2025-06-19')
 ;
 
 insert into gbook
