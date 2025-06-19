@@ -7,15 +7,30 @@
 		<title>Insert title here</title>
 	</head>
 	<body>
-		<h1>손님 등록</h1>
+		<h1>주소록</h1>
 		
-		<h2>손님 정보를 등록하는 폼</h2>
-		<p>손님 정보를 등록하는 폼 입니다.</p>
-		<form action="http://localhost:8080/guestbook/gbc1" method="get">
+		<h2>손님 정보 수정</h2>
+		<p>손님 정보를 수정하는 폼 입니다.</p>
+		<form action="http://localhost:8080/guestbook/gbc" method="get">
 			<table>
+				<tr>
+					<td>이름</td>
+					<td><input type="text" name="name" value=""></td>
+					<td><button type="submit">삭제</button></td>
+				</tr>
 				<tr>
 					<td>비밀번호</td>
 					<td><input type="password" name=""></td>
+					<td><button type="submit">삭제</button></td>
+				</tr>
+				<tr>
+					<td>본문</td>
+					<td><input type="content" name=""></td>
+					<td><button type="submit">삭제</button></td>
+				</tr>
+				<tr>
+					<td>등록일</td>
+					<td><input type="regDate" name=""></td>
 					<td><button type="submit">삭제</button></td>
 				</tr>
 			</table>
