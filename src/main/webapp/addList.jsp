@@ -1,14 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ page import="java.util.List"    %>    
+<%@ page import="java.util.List" %>    
 <%@ page import="com.javaex.vo.GbookVO"  %>
 
 <% //자바문법
 	List<GbookVO> gbookList = (List<GbookVO>)request.getAttribute("gList");
 	
-    System.out.println("여기는 jsp");
-    System.out.println(gbookList);
+
 %>
 
 <!DOCTYPE html>
@@ -81,21 +80,24 @@
 			<td colspan="4">방문하고 갑니다.</td>
 		</tr>
 		<tr>
-			<td>[수정폼으로 이동]</td>
-			<td><a href="http://localhost:8080/guestbook/gbc?action=delete&no=1">[삭제]</a></td>
-		</tr>
+			<td><a
+				href="http://localhost:8080/guestbook/gbc?action=mform&no=<%=gbookList.get(i).getNo() %>">
+				[수정폼으로 이동] </a></td>
+			<td><a
+				href="http://localhost:8080/guestbook/gbc?action=delete&no=<%=gbookList.get(i).getNo()%>">
+				[삭제] <%=gbookList.get(i).getNo()%>
+				</a></td>
+				<!-- 원래 버튼으로 해야된다 js필요 안배워서 a태그로 구현 -->
+			<tr>
+		</tbody>
 	</table>
-	<br>
-	
+	<br>	
+		
 	<%
 	}
 	%>
 	
-	[주소록 작성폼 이동] : 주소창에 <br>
-	http://localhost:8080/phonebook2/pbc?action=wform
-				
-	<br>입력하시고 엔터입력
+	<a href="http://localhost:8080/guestbook/gbc?action=wform">등록폼 이동</a>
 		
-	<a href="http://localhost:8080/guestbook/gbc?action=add">주소록 작성폼 이동</a>
 	</body>
 </html>

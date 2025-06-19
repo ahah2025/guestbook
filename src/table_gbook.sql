@@ -24,13 +24,22 @@ create table gbook(
 -- 테이블조회
 select * from gbook;
 
-select  no as 식별번호,
-        name as 이름,
-        password as 비밀번호,
-        content as 본문,
-        reg_date as 등록일
+select  no,
+        name,
+        password,
+        content,
+        reg_date
 from gbook
 order by no asc
+;
+
+select  no,
+        name,
+        password,
+        content,
+        reg_date
+from gbook
+where no = 5
 ;
 
 -- 등록
@@ -48,10 +57,10 @@ values(null, '강호동','3333','안녕하세요. 강호동입니다.','2025-06-
 
 -- 수정
 update gbook
-set  name = '서장훈' , 
-     password = '4444',
-     content = '안녕하세요. 서장훈입니다.' 
-where no = 4 
+set  name = '김이박' , 
+     password = '5555',
+     content = '안녕하세요. 김이박입니다.' 
+where no = 5 
 ;
 
 -- 삭제
