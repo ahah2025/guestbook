@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<% //자바문법
+
+	System.out.println("리스트jsp");
+
+%>
+    
 <!DOCTYPE html>
 <html>
 	<head>
@@ -14,8 +21,13 @@
 		<form action="http://localhost:8080/guestbook/gbc" method="get">
 			<table>
 				<tr>
+					<td>식별번호</td>
+					<td><input type="text" name=""></td>
+					<td><button type="submit">삭제</button></td>
+				</tr>
+				<tr>
 					<td>이름</td>
-					<td><input type="text" name="name" value=""></td>
+					<td><input type="text" name=""></td>
 					<td><button type="submit">삭제</button></td>
 				</tr>
 				<tr>
@@ -38,5 +50,6 @@
 		
 		<br><br>
 		<a href="">메인으로 돌아가기</a>
+		<a href="http://localhost:8080/guestbook/gbc?action=list"></a>
 	</body>
 </html>

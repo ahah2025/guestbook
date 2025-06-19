@@ -6,7 +6,8 @@
 
 <% //자바문법
 	List<GbookVO> gbookList = (List<GbookVO>)request.getAttribute("gList");
-	
+
+	System.out.println("리스트jsp");
 
 %>
 
@@ -23,9 +24,11 @@
 		<h2>guest 리스트</h2>
 		<p>guest 리스트입니다.</p>
 		
+		
 		<%
 			for(int i=0; i<gbookList.size(); i++){
 		%>
+		
 		
 		<table border="1" width="540px">
 			<tr>
@@ -83,6 +86,9 @@
 			<td><a
 				href="http://localhost:8080/guestbook/gbc?action=mform&no=<%=gbookList.get(i).getNo() %>">
 				[수정폼으로 이동] </a></td>
+				
+			<%	System.out.println("여기는 수정폼입니다"); %>	
+			
 			<td><a
 				href="http://localhost:8080/guestbook/gbc?action=delete&no=<%=gbookList.get(i).getNo()%>">
 				[삭제] <%=gbookList.get(i).getNo()%>
@@ -93,11 +99,15 @@
 	</table>
 	<br>	
 		
+		
 	<%
 	}
 	%>
+
 	
-	<a href="http://localhost:8080/guestbook/gbc?action=wform">등록폼 이동</a>
+	<a href="http://localhost:8080/guestbook/gbc?action=dForm">등록폼 이동</a>
+	
+		<%	System.out.println("여기는 등록폼입니다"); %>	
 		
 	</body>
 </html>

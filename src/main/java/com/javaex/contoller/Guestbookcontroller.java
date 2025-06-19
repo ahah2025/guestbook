@@ -25,9 +25,7 @@ public class Guestbookcontroller extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 											throws ServletException, IOException {
-		
-		//작동했는지 확인용
-		System.out.println("나오는지 확인하는 용도");
+
 		
 		//action 파라미터의 값이 뭔지 알아야됨
 		String action = request.getParameter("action");
@@ -48,7 +46,7 @@ public class Guestbookcontroller extends HttpServlet {
 			request.setAttribute("gList",gbookList);
 		
 			// 2)list.jsp에 request 객체와 reponse 객체를 보낸다
-			RequestDispatcher rd = request.getRequestDispatcher("/addlist.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("/addList.jsp");
 			rd.forward(request, response);
 			
 		}
@@ -72,7 +70,6 @@ public class Guestbookcontroller extends HttpServlet {
 			String password = request.getParameter("password") ;
 			String content = request.getParameter("content") ;
 			String regDate = request.getParameter("regDate") ;
-			
 
 			//데이터를 묶는다
 			GbookVO gbookVO = new GbookVO(name,password,content,regDate);
